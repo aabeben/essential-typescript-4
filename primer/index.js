@@ -2,8 +2,10 @@ let hatPrice = 100
 console.log(`Hat price ${hatPrice}`)
 let bootsPrice = "100"
 console.log(`Boots price ${bootsPrice}`)
-function sumPrices(first, second, third=0) {
-	return first + second + third;
+function sumPrices(...numbers) {
+	return numbers.reduce((total, val)=>{
+		return total+val;
+	},0);
 }
 let totalPrices = sumPrices(hatPrice, bootsPrice);
 console.log(`Total: ${totalPrices} ${typeof totalPrices}`);
@@ -12,6 +14,8 @@ console.log(`Total: ${totalPrices} ${typeof totalPrices}`)
 
 totalPrices = sumPrices(100,200)
 console.log(`Total: ${totalPrices} ${typeof totalPrices}`)
+totalPrices = sumPrices(100);
+console.log(`Total: ${totalPrices} ${typeof totalPrices}`);
 
 
 
