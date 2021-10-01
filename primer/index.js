@@ -2,6 +2,11 @@ let hatPrice = 100
 console.log(`Hat price ${hatPrice}`)
 let bootsPrice = "100"
 console.log(`Boots price ${bootsPrice}`)
+function sumPrice(first, second, third) {
+	return first + second + third;
+}
+let totalPrice = sumPrice(hatPrice, bootsPrice);
+console.log(`Total Price: ${totalPrice}`);
 
 
 
@@ -10,8 +15,8 @@ if (hatPrice === bootsPrice) {
 } else {
 	console.log("Prices are diffrent")
 }
-let totalPrice = Number(hatPrice) + Number(bootsPrice)
-console.log(`Total price: ${totalPrice}`);
+//let totalPrice = Number(hatPrice) + Number(bootsPrice)
+//console.log(`Total price: ${totalPrice}`);
 
 
 let myVariable = "Adam"
@@ -28,6 +33,6 @@ console.log(`City: ${firstCity || "London"}`)
 
 
 let taxRate; // no tax rate has been defined
-console.log(`Tax rate: ${taxRate || 10}%`)
+console.log(`Tax rate: ${taxRate ?? 10}%`)
 taxRate = 0
-console.log(`Tax rate: ${taxRate || 10}%`)
+console.log(`Tax rate: ${taxRate ?? 10}%`)
